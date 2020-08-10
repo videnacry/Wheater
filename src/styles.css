@@ -1,0 +1,209 @@
+/*Principal Font*/
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap");
+
+/*** Mixins & Default Styles ***/
+* {
+  font-family: Jost, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.flex--row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5vw;
+}
+
+.padding--left {
+  padding-left: 10px;
+}
+
+.padding--left-med {
+  padding-left: 20px;
+}
+
+/*__________ Navbar ____________*/
+.nav {
+  width: auto;
+  height: 60px;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: -7px 7px 23px 0px rgba(232, 232, 232, 1);
+  -moz-box-shadow: -7px 7px 23px 0px rgba(232, 232, 232, 1);
+  box-shadow: -7px 7px 23px 0px rgba(232, 232, 232, 1);
+  display: flex;
+  justify-content: left;
+  padding-left: 125px;
+  text-align: center;
+  padding-top: 15px;
+  font-family: Jost, sans serif;
+  font-weight: bold;
+}
+
+/*__________ Background Image ____________*/
+
+#backgroundWeather {
+  background-image: url("https://source.unsplash.com/A6WQ57dzHgU");
+  background-size: cover;
+  opacity: 0.9;
+  background-attachment: fixed;
+  width: 100%;
+  height: 91%;
+  position: absolute;
+  z-index: -2;
+}
+
+/*__________ City search engine ____________*/
+
+#citySearch {
+  width: 50vw;
+  height: 40vw;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.searcher {
+  font-family: Jost, sans serif;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 45px;
+}
+
+.error {
+  padding: 10px;
+  font-size: 18px;
+  color: red;
+}
+
+input#city {
+  padding: 1.2vw 3vw;
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #575756;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+  border-radius: 50px;
+  border: 1px solid #575756;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+#city::placeholder {
+  color: rgba(87, 87, 86, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+#city:hover,
+#city:focus {
+  padding: 1vw 3vw;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #575756;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+/*__________ Weather Targets ____________*/
+
+#location,
+#weather {
+  width: 300px;
+  height: 250px;
+  padding: 20px;
+  background-color: #ffffffcc;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 55%;
+}
+
+#location {
+  width: 30%;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+#weather {
+  width: 30%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 0px 20px;
+  font-size: 1.5vw;
+}
+
+.weekday {
+  font-size: 1.7vw;
+}
+
+.cityIcon,
+.timeWeek {
+  display: flex;
+  flex-flow: row;
+  margin: 0px 20px;
+  text-align: baseline;
+  justify-content: baseline;
+}
+
+.degree {
+  font-size: 8vw;
+}
+
+.cityName {
+  font-size: 2vw;
+  text-align: center;
+}
+
+.icon {
+  width: 3.5vw;
+  height: 3.5vw;
+}
+
+.weekIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+/*___ Sunrise & Sunset ___*/
+.sunrise,
+.sunset {
+  width: 2vw;
+  height: 2vw;
+}
+
+/*___ Leave Animation ___*/
+
+.windLeave {
+  position: absolute;
+  left: -10%;
+  transform: rotate(180deg);
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="src/Jquery.js"></script>
+    <link href="src/styles.css" rel="stylesheet" type="text/css">
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <!--------- Navbar ------->
+    <nav class="nav">
+      <h1 id="logo">Weather App</h1>
+    </nav>
+    <div id="backgroundWeather"></div>
+    <!-----Target Left ----->
+    <div id="location">
+      <div class="weekIcon">
+        <div class="flex weekday" id="weekDay"></div>
+        <img class="icon" id="icon"></img>
+      </div>
+      <div class="degree row" id="degree"></div>
+      <div class="cityName" id="cityName"></div>
+  </div>
+    <!-----Target Right ----->
+    <div id="weather">
+      <div class="" id="date"></div>
+      <div class="" id="timeZone"></div>
+      <div class="" id="rain"></div>
+      <div class="" id="clouds"></div>
+      <div class="" id="wind"></div>
+      <div class="" id="snow"></div>
+      <div class="flex--row">
+        <div class="flex--row" id="sunrise"></div>
+        <div class="flex--row padding--left-med" id="sunset"></div>
+      </div>
+    </div>
+    <!---------City search engine-------->
+    <form id="citySearch">
+      <label for="searcher" class="searcher" id="searcher"
+        >Enter City Name</label
+      >
+      <input type="text" class="city" id="city" />
+      <span class="error" id="error"></span>
+    </form>
+
+    <!--Images for the animations of the wind weather-->
+
+    <img
+      class="windLeave"
+      id="greenLeave"
+      src="src/assets/redLeave.png"
+      width="3%"
+    />
+
+    <img
+      class="windLeave"
+      id="redLeave"
+      src="src/assets/yellowLeave.png"
+      width="3%"
+    />
+
+    <img
+      class="windLeave"
+      id="coloredLeave"
+      src="src/assets/coloredLeave.png"
+      width="5%"
+    />
+
+    <img
+      class="windLeave"
+      id="dandelionSeed"
+      src="src/assets/dandelionSeed.png"
+      width="3%"
+    />
+
+    <!--Containers for images made in javascript-->
+
+    <div id="snow"></div>
+    
+    <div id="cloud"></div>
+
+    <!--Scripts-->
+
+    <script src="src/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </body>
+</html>
